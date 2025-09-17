@@ -25,10 +25,11 @@ class Zoo:
         self.animals.sort()
         self.group = {}
         for animal in self.animals:
-            if animal[0] not in self.group:
-                self.group[animal[0]] = [animal]
+            animal_first_letter = animal[0]
+            if animal_first_letter not in self.group:
+                self.group[animal_first_letter] = [animal]
             else:
-                self.group[animal[0]].append(animal)
+                self.group[animal_first_letter].append(animal)
     def get_groups(self):
         print(self.group)
 
